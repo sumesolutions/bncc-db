@@ -2,7 +2,7 @@
 
 # BNCC DB
 
-Database with structured data from the Base Nacional Comum Curricular ([BNCC](http://basenacionalcomum.mec.gov.br/a-base))
+Database with structured data from the Base Nacional Comum Curricular ([BNCC](http://basenacionalcomum.mec.gov.br/a-base)).
 To load the data, use the spreadsheets on the public [drive](https://drive.google.com/drive/folders/15T_vh-hlFLKVeDk2sSjdG3-wJxcOshkW?usp=drive_link)
 
 ## Table of Contents
