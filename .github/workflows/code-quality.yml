@@ -60,5 +60,5 @@ jobs:
 
     - name: Unit Test
       run: |
-        poetry run pytest --exitfirst -q --tb=short
+        poetry run pytest -p no:sugar --exitfirst -q --tb=short
 
