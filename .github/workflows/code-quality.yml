@@ -60,3 +60,11 @@ jobs:
         run: |
           poetry run pytest -p no:sugar --exitfirst -q --tb=short --doctest-modules --cov=./ --cov-report xml:./tmp/coverage.xml
 
+      - name: 📊 Upload coverage to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: sumesolutions/bncc-db
+          fail_ci_if_error: true
+        if: github.ref != 'refs/heads/main'
+

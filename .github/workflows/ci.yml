@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  code-quality-check:
+    name: Code Quality Check
+    uses: ./.github/workflows/code-quality.yml
+    permissions:
+      contents: read
+      packages: write
+    secrets: inherit
+
+  code-analyzes:
+    needs:
+      - code-quality-check
+    name: Code Analysis
+    uses: ./.github/workflows/code-analysis.yml
