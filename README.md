@@ -20,6 +20,16 @@ To load the data, use the spreadsheets on the public [drive](https://drive.googl
 Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to
 all make sure to read our [Contributor Guideline](https://sumelms.com/docs/contributing).
 
+
+## Contributors
+
+<a href="https://github.com/sumesolutions/bncc-db/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=sumesolutions/bncc-db" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+
 ## Code of Conduct
 
 Would you like to contribute and participate in our communities? Please read our [Code of Conduct](https://sumelms.com/docs/conduct).
