@@ -66,5 +66,5 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: sumesolutions/bncc-db
           fail_ci_if_error: true
-        if: github.ref != 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
 

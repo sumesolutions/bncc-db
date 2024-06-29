@@ -27,3 +27,8 @@ jobs:
       - code-quality-check
     name: Code Analysis
     uses: ./.github/workflows/code-analysis.yml
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+    secrets: inherit
