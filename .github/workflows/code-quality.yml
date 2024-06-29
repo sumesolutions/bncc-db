@@ -11,33 +11,23 @@ on:
 
 jobs:
   code-quality-check:
-    name: Code Quality Check 
+    name: Code Quality Check
     strategy:
       fail-fast: false
 
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
+    - name: 📥 Check out repository
       uses: actions/checkout@v4
 
-    - name: Set up Python
+    - name: 🐍 Set up Python
       id: setup-python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.10.14'
+        python-version: '3.12.2'
 
-    - name: Set up Poetry
-      uses: abatilo/actions-poetry@v2
-      with:
-        poetry-version: '1.8.2'
-
-    - name: Setup a local virtual environment
-      run: |
-        poetry config virtualenvs.create true --local
-        poetry config virtualenvs.in-project true --local
-
-    - name: Load cached virtual environment
+    - name: 🗄️ Load cached virtual environment
       id: cached-poetry-dependencies
       uses: actions/cache@v4
       with:
@@ -45,20 +35,30 @@ jobs:
         path: ./.venv
         key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}
 
-    - name: Install dependencies
+    - name: 🖌️ Set up Poetry
+      uses: abatilo/actions-poetry@v2
+      with:
+        poetry-version: '1.8.2'
+
+    - name: 🌐 Setup a local virtual environment
+      run: |
+        poetry config virtualenvs.create true --local
+        poetry config virtualenvs.in-project true --local
+
+    - name: 🏭 Install dependencies
       if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       run: poetry install --no-interaction --no-ansi
 
-    - name: Lint
-      run: | 
+    - name: 🕵 Lint
+      run: |
         #  Lint all files
-        poetry run ruff check 
-        #  Check all files sort import 
+        poetry run ruff check
+        #  Check all files sort import
         poetry run ruff check --select I --fix
         #  Check format all files
         poetry run ruff format --check
 
-    - name: Unit Test
+    - name: 🔬 Run unit tests
       run: |
-        poetry run pytest -p no:sugar --exitfirst -q --tb=short
+        poetry run pytest -p no:sugar --exitfirst -q --tb=short --doctest-modules --cov=./ --cov-report xml:./tmp/coverage.xml
 

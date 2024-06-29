@@ -7,13 +7,26 @@ To load the data, use the spreadsheets on the public [drive](https://drive.googl
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
+- [Setup](#setup)
 - [Contributing](#contributing)
+- [Contributors](#contributors)
 - [Code of Conduct](#code-of-conduct)
 - [License](#license)
 
 ## Prerequisites
 - Python >= 3.10
 - PostgreSQL >= 16.0
+
+## Setup
+
+This project uses [``ruff``](https://docs.astral.sh/ruff/) to linting and format code. We also support [``pre-commit``](https://pre-commit.com/) to ensure
+these have been run. To configure your local environment please install these development dependencies and set up
+the commit hooks.
+
+```.bash
+  $ poetry install
+  $ pre-commit install
+```
 
 ## Contributing
 
