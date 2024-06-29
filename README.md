@@ -1,4 +1,22 @@
-<p align="center"><a href="http://basenacionalcomum.mec.gov.br/abase/" target="_blank"><img src="./docs/images/base-nacional-comum-curricular.jpg" width="250" alt="BNCC Logo"></a></p>
+<p align="center">
+  <a href="http://basenacionalcomum.mec.gov.br/abase/" target="_blank">
+    <img src="./docs/images/base-nacional-comum-curricular.jpg" width="250" alt="BNCC Logo">
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/sumesolutions/bncc-db/actions/workflows/main.yml">
+    <img alt="github action" src="https://github.com/sumesolutions/bncc-db/actions/workflows/main.yml/badge.svg" />
+  </a>
+  <a href="https://codecov.io/gh/sumesolutions/bncc-db" >
+    <img src="https://codecov.io/gh/sumesolutions/bncc-db/graph/badge.svg?token=1ZEDQC69PS"/>
+  </a>
+  <a href="https://github.com/sumesolutions/bncc-db/blob/main/LICENSE">
+    <img alt="GitHub" src="https://img.shields.io/github/license/sumesolutions/bncc-db">
+  </a>
+  <a href="https://discord.gg/Yh9q9cd">
+    <img alt="Discord" src="https://img.shields.io/discord/726500188021063682">
+  </a>
+</p>
 
 # BNCC DB
 
