@@ -1,4 +1,22 @@
-<p align="center"><a href="http://basenacionalcomum.mec.gov.br/abase/" target="_blank"><img src="./docs/images/base-nacional-comum-curricular.jpg" width="250" alt="BNCC Logo"></a></p>
+<p align="center">
+  <a href="http://basenacionalcomum.mec.gov.br/abase/" target="_blank">
+    <img src="./docs/images/base-nacional-comum-curricular.jpg" width="250" alt="BNCC Logo">
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/sumesolutions/bncc-db/actions/workflows/main.yml">
+    <img alt="github action" src="https://github.com/sumesolutions/bncc-db/actions/workflows/main.yml/badge.svg" />
+  </a>
+  <a href="https://codecov.io/gh/sumesolutions/bncc-db" >
+    <img src="https://codecov.io/gh/sumesolutions/bncc-db/graph/badge.svg?token=1ZEDQC69PS"/>
+  </a>
+  <a href="https://github.com/sumesolutions/bncc-db/blob/main/LICENSE">
+    <img alt="GitHub" src="https://img.shields.io/github/license/sumesolutions/bncc-db">
+  </a>
+  <a href="https://discord.gg/Yh9q9cd">
+    <img alt="Discord" src="https://img.shields.io/discord/726500188021063682">
+  </a>
+</p>
 
 # BNCC DB
 
@@ -7,7 +25,9 @@ To load the data, use the spreadsheets on the public [drive](https://drive.googl
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
+- [Setup](#setup)
 - [Contributing](#contributing)
+- [Contributors](#contributors)
 - [Code of Conduct](#code-of-conduct)
 - [License](#license)
 
@@ -15,10 +35,31 @@ To load the data, use the spreadsheets on the public [drive](https://drive.googl
 - Python >= 3.10
 - PostgreSQL >= 16.0
 
+## Setup
+
+This project uses [``ruff``](https://docs.astral.sh/ruff/) to linting and format code. We also support [``pre-commit``](https://pre-commit.com/) to ensure
+these have been run. To configure your local environment please install these development dependencies and set up
+the commit hooks.
+
+```.bash
+  $ poetry install
+  $ pre-commit install
+```
+
 ## Contributing
 
 Thank you for considering contributing to the project. In order to ensure that the Sumé LMS community is welcome to
 all make sure to read our [Contributor Guideline](https://sumelms.com/docs/contributing).
+
+
+## Contributors
+
+<a href="https://github.com/sumesolutions/bncc-db/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=sumesolutions/bncc-db" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
 
 ## Code of Conduct
 
